@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-from: #10b981;
+  --brand-to: #0ea5e9;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-slate-100;
+}
+
+.bg-animate {
+  background: linear-gradient(-45deg, #10b981, #0ea5e9, #6366f1, #f59e0b);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
